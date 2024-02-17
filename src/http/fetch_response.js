@@ -46,11 +46,7 @@ export class FetchResponse {
   }
 
   get responseHTML() {
-    if (this.isHTML) {
-      return this.response.clone().text()
-    } else {
-      return Promise.resolve(undefined)
-    }
+    return this.response.clone().text()
   }
 
   header(name) {
